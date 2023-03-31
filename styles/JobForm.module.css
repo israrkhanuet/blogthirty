@@ -1,0 +1,36 @@
+.form2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.label2 {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.input2 textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.button2 {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  background-color: #2ecc71;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button2:hover {
+  background-color: #27ae60;
+}
