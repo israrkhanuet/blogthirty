@@ -5,6 +5,7 @@ function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,49 +22,54 @@ function Contact() {
       setName("");
       setEmail("");
       setMessage("");
+      setSubmitSuccess(true);
     } else {
       console.error("Error submitting form");
+      setSubmitSuccess(false);
     }
   };
 
   return (
     <Layout>
-      <div className="contact-container">
+      <div className='contact-container'>
         <h1>Contact Us</h1>
         <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
+          {submitSuccess && (
+            <div className='success-message'>Message sent successfully!</div>
+          )}
+          <div className='form-group'>
+            <label htmlFor='name'>Name:</label>
             <input
-              className="form-control"
-              type="text"
-              id="name"
+              className='form-control'
+              type='text'
+              id='name'
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
+          <div className='form-group'>
+            <label htmlFor='email'>Email:</label>
             <input
-              className="form-control"
-              type="email"
-              id="email"
+              className='form-control'
+              type='email'
+              id='email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="message">Message:</label>
+          <div className='form-group'>
+            <label htmlFor='message'>Message:</label>
             <textarea
-              className="form-control"
-              id="message"
+              className='form-control'
+              id='message'
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               required
             />
           </div>
-          <button className="btn-submit" type="submit">
+          <button className='btn-submit' type='submit'>
             Submit
           </button>
         </form>
@@ -110,6 +116,10 @@ function Contact() {
           }
           .btn-submit:hover {
             background-color: #5246d7;
+          }
+          .success-message {
+            color: #4caf50;
+            margin-bottom: 1rem;
           }
         `}</style>
       </div>

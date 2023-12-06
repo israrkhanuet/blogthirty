@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <Head>
-        <title>My Next.js App</title>
+        <title>Bannu</title>
       </Head>
       <main>
         <h1>Welcome to Bannu</h1>
