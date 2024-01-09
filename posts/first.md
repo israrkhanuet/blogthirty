@@ -18,5 +18,7 @@ const cors = require("cors");
   optionSuccessStatus: 200,
   };
 - app.use(cors(corsOptions));
+- or simply you can write
+- app.use(cors())
 
 by using this method in app.js file now the cors error will not show again.
