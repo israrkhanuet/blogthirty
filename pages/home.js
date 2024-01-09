@@ -1,138 +1,81 @@
 import Head from "next/head";
-
-// import Link from "next/link";
-// import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const HomePage = () => {
+  const [news, setNews] = useState([
+    {
+      id: 1,
+      title: "Breaking News",
+      image: "https://example.com/news-image.jpg",
+      content: "This is a breaking news story. Stay tuned for updates.",
+      comments: [],
+    },
+    // Add more news items as needed
+  ]);
+
   return (
     <div>
       <Head>
         <title>Bannu</title>
+        <link
+          rel='stylesheet'
+          href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'
+        />
       </Head>
-      <main>
-        <h1>Welcome to Bannu</h1>
+      <main className='container'>
+        <h1 className='mt-4 mb-4 text-center'>Welcome News</h1>
+        {news.map((post) => (
+          <div key={post.id} className='card mb-4'>
+            <img
+              src={"https://picsum.photos/800/400?random"}
+              alt={post.title}
+              className='card-img-top'
+              style={{ maxHeight: "300px", objectFit: "cover" }}
+            />
+            <div className='card-body'>
+              <h2 className='card-title'>{post.title}</h2>
+              <p className='card-text'>{post.content}</p>
+              <CommentsSection postId={post.id} comments={post.comments} />
+            </div>
+          </div>
+        ))}
       </main>
-      <style jsx>{`
-        main {
-          background-image: url("https://free-images.com/lg/da3b/lake_minnewanka_11092005.jpg");
-          background-size: cover;
-          background-position: center;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        h1 {
-          font-size: 48px;
-          color: white;
-          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-      `}</style>
+    </div>
+  );
+};
+
+const CommentsSection = ({ postId, comments }) => {
+  const [newComment, setNewComment] = useState("");
+
+  const handleAddComment = () => {
+    // Implement logic to add a new comment to the backend and update state
+    // For simplicity, we'll update the state directly here
+    setNewComment(""); // Clear the input field
+  };
+
+  return (
+    <div className='comments-section'>
+      <h3 className='mb-3'>Comments</h3>
+      <ul className='list-group'>
+        {comments.map((comment, index) => (
+          <li key={index} className='list-group-item'>
+            {comment}
+          </li>
+        ))}
+      </ul>
+      <div className='mt-3'>
+        <textarea
+          rows='3'
+          className='form-control'
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+        ></textarea>
+        <button className='btn btn-primary mt-2' onClick={handleAddComment}>
+          Add Comment
+        </button>
+      </div>
     </div>
   );
 };
 
 export default HomePage;
-
-// function Home() {
-//   const [blogs, setBlogs] = useState([]);
-//   const [jobs, setJobs] = useState([]);
-
-//   useEffect(() => {
-//     // Fetch blogs and jobs data from API endpoints
-//     const fetchBlogs = async () => {
-//       const res = await fetch("/api/blogs");
-//       const data = await res.json();
-//       setBlogs(data);
-//     };
-//     const fetchJobs = async () => {
-//       const res = await fetch("/api/jobs");
-//       const data = await res.json();
-//       setJobs(data);
-//     };
-//     fetchBlogs();
-//     fetchJobs();
-//   }, []);
-
-//   return (
-//     <div className="container">
-//       <Head>
-//         <title>My App</title>
-//         <link rel="icon" href="/favicon.ico" />
-//       </Head>
-
-//       <main>
-//         <h1>Welcome blogthirty</h1>
-
-//         <section>
-//           <h2>Blogs</h2>
-//           {blogs.length > 0 ? (
-//             <ul>
-//               {blogs.map((blog) => (
-//                 <li key={blog.id}>
-//                   <Link href={`/blogs/${blog.id}`}>
-//                     <a>{blog.title}</a>
-//                   </Link>
-//                 </li>
-//               ))}
-//             </ul>
-//           ) : (
-//             <p>No blogs found.</p>
-//           )}
-//         </section>
-
-//         <section>
-//           <h2>Jobs</h2>
-//           {jobs.length > 0 ? (
-//             <ul>
-//               {jobs.map((job) => (
-//                 <li key={job.id}>
-//                   <Link href={`/jobs/${job.id}`}>
-//                     <a>{job.title}</a>
-//                   </Link>
-//                 </li>
-//               ))}
-//             </ul>
-//           ) : (
-//             <p>No jobs found.</p>
-//           )}
-//         </section>
-//       </main>
-
-//       <style jsx>{`
-//         .container {
-//           max-width: 800px;
-//           margin: 0 auto;
-//           padding: 2rem;
-//         }
-//         h1 {
-//           margin-bottom: 2rem;
-//           text-align: center;
-//         }
-//         section {
-//           margin-bottom: 3rem;
-//         }
-//         h2 {
-//           margin-bottom: 1rem;
-//         }
-//         ul {
-//           list-style: none;
-//           padding: 0;
-//           margin: 0;
-//         }
-//         li {
-//           margin-bottom: 0.5rem;
-//         }
-//         a {
-//           color: #6c63ff;
-//           text-decoration: none;
-//         }
-//         a:hover {
-//           text-decoration: underline;
-//         }
-//       `}</style>
-//     </div>
-//   );
-// }
-
-// export default Home;
