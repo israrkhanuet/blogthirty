@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Bookworm Next | Personal Blog Theme",
+    "title": "Personal Blog",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
@@ -16,9 +16,9 @@
   },
 
   "params": {
-    "tag_manager_id": "",
+    "tag_manager_id": "GTM-W2ZQ8Z2S",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2022 a theme by [themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2024 All rights reserved"
   },
 
   "metadata": {
