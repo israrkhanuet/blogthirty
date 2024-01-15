@@ -2,7 +2,7 @@
   "site": {
     "title": "Personal Blog",
     "base_url": "/",
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/favicon.svg",
     "logo": "/images/logo.png",
     "logo_width": "55",
     "logo_height": "45",
