@@ -7,7 +7,7 @@ const Contact = ({ data }) => {
   const { title } = frontmatter;
 
   // Updated API endpoint
-  const apiEndpoint = "http://localhost:3000/api/contactapi";
+  const apiEndpoint = "/api/contactapi";
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
