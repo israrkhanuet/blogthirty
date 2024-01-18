@@ -28,7 +28,7 @@ const Header = () => {
     <>
       <header
         className={`sticky top-0 z-50 bg-white py-2 transition-all ${
-          navFixed ? "shadow" : "pt-8 md:pt-16"
+          navFixed ? "shadow" : "pt-8 md:pt-4"
         }`}
       >
         <nav className="navbar container">

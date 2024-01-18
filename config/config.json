@@ -16,7 +16,7 @@
   },
 
   "params": {
-    "tag_manager_id": "GTM-W2ZQ8Z2S",
+    "tag_manager_id": "#",
     "contact_form_action": "#",
     "copyright": "Copyright © 2024 All rights reserved"
   },
@@ -24,6 +24,6 @@
   "metadata": {
     "meta_author": "Besto",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_description": "Blog"
   }
 }
