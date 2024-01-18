@@ -7,10 +7,12 @@ const News = () => {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("loading");
 
+  const apiEndpoint = `${process.env.NEXT_PUBLIC_API_URL}/news`;
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/news");
+        const response = await axios.get(apiEndpoint);
         setData(response.data);
         setStatus("success");
       } catch (error) {

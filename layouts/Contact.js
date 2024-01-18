@@ -7,8 +7,7 @@ const Contact = ({ data }) => {
   const { title } = frontmatter;
 
   // Updated API endpoint
-  const apiEndpoint =
-    process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000/api/contactapi";
+  const apiEndpoint = `${process.env.NEXT_PUBLIC_API_URL}/contactapi`;
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

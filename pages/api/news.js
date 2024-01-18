@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     var url =
       "https://newsapi.org/v2/top-headlines?" +
       "country=us&" +
-      "apiKey=bd7ed6fd82ae42b89ebc6d0b977573da";
+      `apiKey=${process.env.NEWS_API}`;
     const response = await axios.get(url);
     res.status(200).json(response.data);
   } catch (error) {
