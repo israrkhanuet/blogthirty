@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Personal Blog",
+    "title": "bestoblog",
     "base_url": "/",
     "favicon": "/images/favicon.svg",
     "logo": "/images/logo.png",
@@ -22,8 +22,8 @@
   },
 
   "metadata": {
-    "meta_author": "Besto",
+    "meta_author": "Bestoblog",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Blog"
+    "meta_description": "bestoblog"
   }
 }

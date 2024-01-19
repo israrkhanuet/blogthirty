@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
+import Head from "next/head";
 
 const News = () => {
   const [data, setData] = useState(null);
@@ -41,6 +42,18 @@ const News = () => {
 
   return (
     <div>
+      <Head>
+        <title>News Headlines</title>
+        <meta name="description" content="Today news headlines and updates" />
+        <link rel="canonical" href="https://bestoblog.vercel.app/about" />
+        <meta property="og:title" content="News Headlines" />
+        <meta
+          property="og:description"
+          content="Today news headlines and updates"
+        />
+        <meta property="og:image" content={data.articles[0].urlToImage} />
+        <meta property="og:url" content="https://bestoblog.vercel.app/about" />
+      </Head>
       <p className="mb-4 flex items-center justify-center text-2xl font-bold">
         NEWS HEADLINES
       </p>

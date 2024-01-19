@@ -24,7 +24,14 @@ const NewsDetail = () => {
   };
 
   return (
-    <Base>
+    <Base
+      title={article?.title}
+      meta_title="News Headlines"
+      description={article?.description}
+      image={article?.urlToImage}
+      noindex={false}
+      canonical="https://bestoblog.vercel.app/about"
+    >
       <div className="min-h-screen bg-gray-100">
         <div className="container mx-auto py-8">
           <div className="mx-auto max-w-2xl rounded-md bg-white p-6 shadow-md">
