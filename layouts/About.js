@@ -76,12 +76,19 @@ const News = () => {
                 }}
               >
                 <a>
-                  {article.urlToImage && (
+                  {article.urlToImage ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       className="h-48 w-full object-cover"
                       src={article.urlToImage}
                       alt={article.title}
+                    />
+                  ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      className="h-48 w-full object-cover"
+                      src="/images/logo.png"
+                      alt="Default Image"
                     />
                   )}
                   <div className="px-6 py-4">
@@ -89,7 +96,11 @@ const News = () => {
                       {article.title}
                     </div>
                     <p className="text-base text-gray-700">
-                      {article.description}
+                      {article.description
+                        ? article.description
+                        : article.title
+                        ? null
+                        : "No desription available"}
                     </p>
                   </div>
                   <div className="px-6 py-1">
