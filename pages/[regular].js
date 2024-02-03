@@ -21,7 +21,6 @@ const RegularPages = ({ slug, data, postSlug, authors, posts }) => {
     tags,
   } = data.frontmatter;
   const { content } = data;
-
   return (
     <Base
       title={title}
@@ -29,7 +28,7 @@ const RegularPages = ({ slug, data, postSlug, authors, posts }) => {
       meta_title={meta_title}
       image={image}
       noindex={noindex}
-      canonical={canonical}
+      canonical={slug}
       tags={tags}
     >
       {/* single post */}

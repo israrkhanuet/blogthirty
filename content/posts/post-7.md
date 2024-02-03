@@ -2,7 +2,7 @@
 title: "Top 10 Highest-Earning Bloggers of 2022"
 description: "Discover the stories of the top 10 bloggers who turned passion into profit."
 date: 2024-02-02
-image: "https://picsum.photos/200/100"
+image: "/images/posts/0401.jpg"
 categories: ["Development"]
 authors: ["ChatGPT"]
 tags: ["bloggers", "income", "success", "top 10"]

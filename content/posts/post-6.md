@@ -1,7 +1,7 @@
 ---
 title: "Two Forms of Pre-rendering"
 description: "meta description"
-image: "https://picsum.photos/200/100"
+image: "/images/posts/0401.jpg"
 date: 2020-01-01
 draft: false
 authors: ["Israr"]

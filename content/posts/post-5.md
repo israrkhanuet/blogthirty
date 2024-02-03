@@ -1,7 +1,7 @@
 ---
 title: "Embracing Change: Thriving in Today's Fast-Paced World"
-description: "bestoblog newblog"
-image: "https://picsum.photos/200/100"
+description: "In a world that's constantly evolving, the ability to adapt and embrace change becomes a key factor in our personal and professional growth."
+image: "/images/posts/0401.jpg"
 date: 2024-01-09
 draft: false
 authors: ["Israr"]

@@ -2,7 +2,7 @@
 title: "Understanding the Israel-Palestine Conflict"
 description: "meta description"
 date: 2023-12-06
-image: "https://picsum.photos/200/100"
+image: "/images/posts/palestin.webp"
 categories: ["History"]
 authors: ["Mark Dinn"]
 tags: ["History", "Israel", "Palestin", "War"]

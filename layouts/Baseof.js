@@ -30,10 +30,24 @@ const Base = ({
         </title>
 
         {/* canonical url */}
-        {canonical && <link rel="canonical" href={canonical} itemProp="url" />}
+        {
+          <link
+            rel="canonical"
+            href={`${base_url}/${canonical}`}
+            itemProp="url"
+          />
+        }
+
+        {/* meta-verfication */}
+        <meta
+          name="google-site-verification"
+          content={
+            "google-site-verification=H15CrxtgvTKXewlDqTTrF5CUAHbm-rUEKztTFNtOEWo"
+          }
+        />
 
         {/* noindex robots */}
-        {noindex && <meta name="robots" content="noindex,nofollow" />}
+        <meta name="robots" content="index, follow" />
 
         {/* meta-description */}
         <meta
@@ -57,7 +71,7 @@ const Base = ({
           property="og:description"
           content={plainify(description ? description : meta_description)}
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={base_url} />
         <meta
           property="og:url"
           content={`${base_url}/${router.asPath.replace("/", "")}`}

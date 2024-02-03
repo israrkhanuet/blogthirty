@@ -2,7 +2,7 @@
 title: Localhost address to your domain address in vercel
 description: "How to change localhost to your domain address while deploy your code to vercel"
 date: 2023-03-20
-image: "https://picsum.photos/200/100"
+image: "/images/posts/0401.jpg"
 categories: ["development"]
 authors: ["Israr"]
 tags:
