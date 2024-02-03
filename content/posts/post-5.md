@@ -1,7 +1,7 @@
 ---
 title: "Embracing Change: Thriving in Today's Fast-Paced World"
 description: "bestoblog newblog"
-image: "https://picsum.photos/200/120"
+image: "https://picsum.photos/200/100"
 date: 2024-01-09
 draft: false
 authors: ["Israr"]

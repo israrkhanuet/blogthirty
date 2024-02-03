@@ -12,6 +12,7 @@ const Base = ({
   image,
   noindex,
   canonical,
+  tags,
   children,
 }) => {
   const { meta_image, meta_author, meta_description } = config.metadata;
@@ -88,6 +89,9 @@ const Base = ({
           content={`${base_url}${image ? image : meta_image}`}
         />
         <meta name="twitter:card" content="summary_large_image" />
+
+        {/* meta-keywords */}
+        {tags && <meta name="keywords" content={tags.join(", ")} />}
       </Head>
       <Header />
       {/* main site */}

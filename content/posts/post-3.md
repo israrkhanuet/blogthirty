@@ -5,7 +5,7 @@ date: 2023-12-06
 image: "/images/posts/03.jpg"
 categories: ["food"]
 authors: ["Israr"]
-tags: ["best diet plan", "diet plan", "maze of diets"]
+tags: ["best diet plan", "diet plan", "maze of diets", "Health"]
 draft: false
 ---
 

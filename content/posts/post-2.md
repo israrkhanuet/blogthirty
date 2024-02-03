@@ -2,7 +2,7 @@
 title: How to solve cors error in Node.js
 description: "meta description"
 date: 2023-03-20
-image: "/images/posts/02.jpg"
+image: "https://picsum.photos/200/100"
 categories: ["development"]
 authors: ["Israr"]
 tags: ["cors", "cors error", "cors error in nodejs"]
