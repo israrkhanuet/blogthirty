@@ -10,16 +10,8 @@ const { blog_folder } = config.settings;
 
 // for all regular pages
 const RegularPages = ({ slug, data, postSlug, authors, posts }) => {
-  const {
-    title,
-    meta_title,
-    description,
-    image,
-    noindex,
-    canonical,
-    layout,
-    tags,
-  } = data.frontmatter;
+  const { title, meta_title, description, image, noindex, layout, tags } =
+    data.frontmatter;
   const { content } = data;
   return (
     <Base

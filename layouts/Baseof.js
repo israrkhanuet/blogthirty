@@ -10,7 +10,6 @@ const Base = ({
   meta_title,
   description,
   image,
-  noindex,
   canonical,
   tags,
   children,

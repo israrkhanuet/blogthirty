@@ -1,5 +1,5 @@
 ---
-title: "I’m John Doe, A content writer based in LDN, currently at Bookworm"
+title: "I’m Israr khan, A content writer based in PAK,"
 meta_title: "About"
 image: "/images/author.jpg"
 layout: "about"
